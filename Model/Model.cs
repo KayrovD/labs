@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+    //определение интерфейса
     public interface Properties
     {
         int number_of_corners
@@ -37,13 +38,14 @@ namespace Model
     }
 
 
-    public class Circle : Properties
+    public class Circle : Properties//реализация интерфейса в классе геометрической фигуры
     {
-        private string type = "Circle";
+        private const string type = "Circle";
         private const int nc = 0;
         private Point O;
         private double R;
 
+        //построение окружности с радиусом R и центром в точке O
         public Circle(double o_x, double o_y, double rad)
         {
             if (rad <= 0)
@@ -76,9 +78,9 @@ namespace Model
     }
 
 
-    public class Rectangle : Properties
+    public class Rectangle : Properties//реализация интерфейса в классе геометрической фигуры
     {
-        private string type = "Rectangle";
+        private const string type = "Rectangle";
         private const int nc = 4;
         private double width;
         private double height;
@@ -87,6 +89,7 @@ namespace Model
         private Point C;
         private Point D;
 
+        //построение прямоугльника по точкам диагонали, стороны прямоугольника параллельны координатным осям
         public Rectangle(double a_x, double a_y, double c_x, double c_y)
         {
             A = new Point(a_x, a_y);
@@ -149,6 +152,9 @@ namespace Model
     }
 
 
+    //статичный класс для тестирования классов библиотеки
+    //имена статичных методов класса соответствуют именам тестируемых классов
+    //реализован "грубый" перехват ВСЕХ исключений при вводе данных аргументов конструкторов в командной строке
     public static class Testing
     {
         public static void Circle()

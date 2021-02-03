@@ -152,6 +152,31 @@ namespace Model
     }
 
 
+    public class Triangle : Properties
+    {
+        public Triangle()
+        {
+
+        }
+        public int number_of_corners => throw new NotImplementedException();
+
+        public double get_area()
+        {
+            throw new NotImplementedException();
+        }
+
+        public double get_perimeter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string get_type()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
     //статичный класс для тестирования классов библиотеки
     //имена статичных методов класса соответствуют именам тестируемых классов
     //реализован "грубый" перехват ВСЕХ исключений при вводе данных аргументов конструкторов в командной строке

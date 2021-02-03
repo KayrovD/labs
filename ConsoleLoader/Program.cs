@@ -30,6 +30,8 @@ namespace ConsoleLoader
             System.Console.WriteLine("Количество углов: " + prop_rec.number_of_corners);
             System.Console.WriteLine("Периметр: " + prop_rec.get_perimeter());
 
+            //тестирование посредством статического класса для тестирования,
+            //имена статических методов соответсвуют тестируемым классам библиотеки
             Model.Testing.Circle();
             System.Console.WriteLine();
             Model.Testing.Rectangle();
